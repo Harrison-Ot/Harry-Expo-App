@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Harry",
-    "slug": "Harry",
+    "name": "Green Lab",
+    "slug": "green-lab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
-    "scheme": "harry",
+    "scheme": "green-lab",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/images/logo.png"

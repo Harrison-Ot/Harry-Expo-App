@@ -1,23 +1,31 @@
-import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import BG from "@/assets/images/bg4.jpg";
+
 
 import { Link } from 'expo-router';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-            <ImageBackground
-                source={BG}
-                style={styles.image}
-            >
+            <Text style={styles.text1}>Good Morning!</Text>
+            
 			<Text style={styles.text}>Welcome to Green Lab</Text>
             <Link href="/explore" style={styles.link} asChild>
-                <Pressable style={styles.button}>
-                    <Text style={styles.buttonText}>Explore more</Text>
-                </Pressable>
+               
             </Link>
-            </ImageBackground>
+            <TextInput
+                placeholder="Enter your name"
+                style={styles.input}
+            />
+             <TextInput
+                placeholder="Enter Password"
+                style={styles.input}
+                secureTextEntry
+                
+            />
+             <Pressable style={styles.button}>
+                    <Text style={styles.buttonText}>Login</Text>
+                </Pressable>
 		</View>
 	);
 }
@@ -28,13 +36,37 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
         flexDirection: 'column',
 		justifyContent: 'center',
+        backgroundColor: 'white',
 	},
     text: {
-        color: 'green',
-        fontSize: 20,
+        color: '#4F7942',
+        fontSize: 35,
+        marginBottom: 20,
         fontWeight: 'bold',
+        interlineHeight: 40,
+        underlineColorAndroid: 'green',
         textAlign: 'center',
         
+    },
+     text1: {
+        color: '#50C878',
+        fontSize: 35,
+        marginBottom: 20,
+        fontWeight: 'bold',
+        interlineHeight: 40,
+        underlineColorAndroid: 'green',
+        textAlign: 'center',
+        
+    },
+    input: {
+        borderWidth: 2,
+        borderColor: 'gray',
+        padding: 10,
+        marginVertical: 10,
+        width: '80%',
+        borderRadius: 10,
+        backgroundColor: '#f0f0f027',
+
     },
     image: {
         
